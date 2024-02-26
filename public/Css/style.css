@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Navbar Menu */
+.navbar-container {
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #ffffffc9;
+    z-index: 1;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+    & ul {
+        display: flex;
+
+        & li {
+            margin: 30px;
+
+            & a {
+                font-size: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+                transition: all .4s ease;
+                color: #1a1a1a;
+            }
+
+            & a:hover {
+                color: #568fd0;
+            }
+        }
+    }
+}
+
+/* Banner Product */
+.banner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
+
+    & .banner-images {
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-image .8s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: changeImage 20s infinite;
+    }
+}
+
+@keyframes changeImage {
+    0% {
+        /* background-image: url('../images/Movie-Banner1.png'); */
+        background-color: #568fd0;
+    }
+
+    25% {
+        /* background-image: url('../images/Movie-Banner2.jpg'); */
+        background-color: #1b64b8;
+    }
+
+    50% {
+        /* background-image: url('../images/Movie-Banner3.jpg'); */
+        background-color: #053c7b;
+    }
+
+    75% {
+        /* background-image: url('../images/Movie-Banner4.jpg'); */
+        background-color: #082f5b;
+    }
+
+    100% {
+        /* background-image: url('../images/Movie-Banner5.png'); */
+        background-color: #021c39;
+    }
+}
+
+/* Insert Css */
+.Insert-container {
+    width: 450px;
+    height: 500px;
+    padding: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffffde;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+
+    & .Title-Head-Insert {
+        font-size: 35px;
+        font-weight: 600;
+        font-family: "Fredoka", sans-serif;
+    }
+
+    & .title {
+        padding: 10px;
+        font-size: 35px;
+        font-weight: 600;
+        font-family: "Fredoka", sans-serif;
+    }
+
+    & .Form-Insert {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    & .Title-Insert {
+        margin-bottom: 5px;
+    }
+
+    & .Insert-Input {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    & .button-submit {
+        padding: 10px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all .4s ease;
+        margin-top: 15px;
+    }
+
+    & .button-submit:hover {
+        background-color: #0056b3;
+    }
+}
+
+/* Show Data Css */
+
+.Title-Product-Header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.Product-Container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & .Product-list {
+        width: 250px;
+        height: 350px;
+        margin: 30px 50px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all .5s ease;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+        background: #568fd0;
+
+        & .Product-images {
+            position: relative;
+            overflow: hidden;
+
+            & .Image-Items {
+                width: 100%;
+                height: 350px;
+                transition: all .5s ease;
+            }
+
+            & .Image-Items:hover {
+                transform: scale(1.05);
+            }
+
+            & .Product-title {
+                width: 100%;
+                position: absolute;
+                padding: 15px;
+                font-size: 16px;
+                color: #1a1a1a;
+                text-align: center;
+                bottom: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        .Product-list {
+            width: calc(50% - 100px);
+            margin: 6px 0;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .Product-list {
+            width: 100%;
+        }
+    }
+}
