@@ -46,7 +46,7 @@
     }
 }
 
-/* Banner Product */
+/* Image Product Fade */
 .banner-container {
     width: 100%;
     display: flex;
@@ -98,121 +98,52 @@
 }
 
 /* Show Data Css */
-.Title-Product-Header {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    padding: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
+.container-table {
 
-.Product-Container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    & h1 {
+        text-align: center;
+        margin: 30px;
+    }
 
-    & .Product-list {
-        width: 250px;
-        height: 350px;
-        margin: 30px 50px;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: all .5s ease;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
-        background: #568fd0;
+    & table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-        & .Product-images {
-            position: relative;
-            overflow: hidden;
+    & th,
+    & td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
 
-            & .Image-Items {
-                width: 100%;
-                height: 350px;
-                transition: all .5s ease;
-            }
+    & th {
+        background-color: #4caf50;
+        color: #fff;
+    }
 
-            & .Image-Items:hover {
-                transform: scale(1.05);
-            }
+    & .button-edit,
+    .button-delete {
+        width: 60px;
+        height: 30px;
+        font-size: 12px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0056b3;
+        cursor: pointer;
+        position: relative;
 
-            & .Product-title {
-                width: 100%;
-                position: absolute;
-                padding: 15px;
-                font-size: 16px;
-                color: #1a1a1a;
-                text-align: center;
-                bottom: 0;
-            }
+        & a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
         }
     }
 
-    @media only screen and (max-width: 700px) {
-        .Product-list {
-            width: calc(50% - 100px);
-            margin: 6px 0;
-        }
-    }
-
-    @media only screen and (max-width: 500px) {
-        .Product-list {
-            width: 100%;
-        }
-    }
-
-    & .container-table {
-
-        & h1 {
-            text-align: center;
-            margin: 30px;
-        }
-
-        & table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        & th,
-        & td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        & th {
-            background-color: #4caf50;
-            color: #fff;
-        }
-
-        & .button-edit,
-        .button-delete {
-            width: 60px;
-            height: 30px;
-            font-size: 12px;
-            border: none;
-            border-radius: 5px;
-            background-color: #0056b3;
-            cursor: pointer;
-            position: relative;
-
-            & a {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: #ffffff;
-            }
-        }
-
-        & .button-delete {
-            background-color: rgba(245, 103, 103, 0.941);
-        }
+    & .button-delete {
+        background-color: rgba(245, 103, 103, 0.941);
     }
 }
 
