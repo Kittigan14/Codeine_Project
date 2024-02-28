@@ -97,70 +97,7 @@
     }
 }
 
-/* Insert Css */
-.Insert-container {
-    width: 450px;
-    height: 500px;
-    padding: 25px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    background: #ffffffde;
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 999;
-
-    & .Title-Head-Insert {
-        font-size: 35px;
-        font-weight: 600;
-        font-family: "Fredoka", sans-serif;
-    }
-
-    & .title {
-        padding: 10px;
-        font-size: 35px;
-        font-weight: 600;
-        font-family: "Fredoka", sans-serif;
-    }
-
-    & .Form-Insert {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-    }
-
-    & .Title-Insert {
-        margin-bottom: 5px;
-    }
-
-    & .Insert-Input {
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        outline: none;
-    }
-
-    & .button-submit {
-        padding: 10px;
-        background-color: #007BFF;
-        color: #fff;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-        transition: all .4s ease;
-        margin-top: 15px;
-    }
-
-    & .button-submit:hover {
-        background-color: #0056b3;
-    }
-}
-
 /* Show Data Css */
-
 .Title-Product-Header {
     width: 100%;
     height: 100px;
@@ -227,5 +164,123 @@
         .Product-list {
             width: 100%;
         }
+    }
+
+    & .container-table {
+
+        & h1 {
+            text-align: center;
+            margin: 30px;
+        }
+
+        & table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        & th,
+        & td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        & th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        & .button-edit,
+        .button-delete {
+            width: 60px;
+            height: 30px;
+            font-size: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0056b3;
+            cursor: pointer;
+            position: relative;
+
+            & a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #ffffff;
+            }
+        }
+
+        & .button-delete {
+            background-color: rgba(245, 103, 103, 0.941);
+        }
+    }
+}
+
+/* Insert Css */
+.Insert-container {
+    width: 450px;
+    height: 500px;
+    padding: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffffde;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+
+    & .Title-Head-Insert {
+        font-size: 35px;
+        font-weight: 600;
+        font-family: "Fredoka", sans-serif;
+    }
+
+    & .title {
+        padding: 10px;
+        font-size: 35px;
+        font-weight: 600;
+        font-family: "Fredoka", sans-serif;
+    }
+
+    & .Form-Insert {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    & .Title-Head-Insert {
+        font-size: 25px;
+        font-weight: bold;
+        font-family: "Josefin Sans", sans-serif;
+        text-transform: uppercase;
+    }
+
+    & .Title-Insert {
+        margin-bottom: 5px;
+    }
+
+    & .Insert-Input {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    & .button-submit {
+        padding: 10px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all .4s ease;
+        margin-top: 15px;
+    }
+
+    & .button-submit:hover {
+        background-color: #0056b3;
     }
 }
