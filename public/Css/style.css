@@ -226,6 +226,18 @@
     justify-content: center;
     align-items: center;
 
+    & #dashboard-1 {
+        background-color: #f4fd95;
+    }
+
+    & #dashboard-2 {
+        background-color: #b6fd95;
+    }
+
+    & #dashboard-3 {
+        background-color: #ff8787;
+    }
+
     & .dashboard-list {
         width: 300px;
         height: 300px;
@@ -266,8 +278,18 @@
                 transform: translate(-50%, -50%);
                 width: 64px;
                 height: 64px;
-                outline: 1px solid black;
                 border-radius: 50%;
+            }
+
+            & #icon-dash-1 {
+
+                & img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -43%);
+                }
+            
             }
         }
     }
